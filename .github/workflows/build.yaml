@@ -22,7 +22,7 @@ env:
   NSS_PACKAGES_REPOSITORY_BRANCH: NSS-12.5-K6.x
 
   # Build Configuration
-  CONFIG_FILE: ax3600.config
+  CONFIG_FILE: ipq60xx.config
   CUSTOM_FILES_PATH: files
 
   # Release Configuration
@@ -186,8 +186,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v5
         with:
-          name: ipq807x-images
-          path: openwrt/bin/targets/qualcommax/ipq807x
+          name: ipq60xx-images
+          path: openwrt/bin/targets/qualcommax/ipq60xx
           if-no-files-found: error
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
